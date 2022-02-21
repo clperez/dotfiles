@@ -1,0 +1,116 @@
+{
+	"files.autoSave": "afterDelay",
+    "window.restoreWindows": "none",
+	"editor.acceptSuggestionOnEnter": "off", // avoids entering text when i want to enter.
+	//"editor.autoClosingBrackets": "never", // always, languageDefined, beforeWhitespace, never
+	"editor.formatOnSave": true,
+	"editor.fontFamily": "Cascadia Code",
+	"editor.fontSize": 16,
+	"editor.rulers": [
+		75,
+		80
+	],
+	"editor.suggestSelection": "first",
+	"editor.tabCompletion": "on",
+	"search.mode": "view",
+	"terminal.integrated.fontSize": 16,
+	//"terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
+	"vim.insertModeKeyBindings": [
+		{
+			"before": [
+				"k",
+				"j"
+			],
+			"after": [
+				"<Esc>"
+			]
+		},
+	{
+			"before":["i"],"after":["k"]
+	}]
+	,
+	"workbench.editor.tabSizing": "fit",
+	//"workbench.panel.defaultLocation": "right",
+	"workbench.panel.defaultLocation": "bottom",
+	"workbench.editorAssociations": {
+		"*.ipynb": "jupyter.notebook.ipynb"
+	},
+	"remote.SSH.remotePlatform": {
+		"tamqa": "linux",
+		"172.16.50.113": "linux",
+		"uklorhvmeng11.engineering.local": "linux",
+		"172.16.50.121": "linux",
+		"192.168.116.77": "linux",
+		"172.24.7.96": "linux",
+		"172.16.50.95": "linux",
+		"192.168.7.245": "linux"
+	},
+	"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+	"FSharp.useSdkScripts": true,
+	"[javascript]": {
+		"editor.defaultFormatter": "HookyQR.beautify"
+	},
+	"[bat]": {
+		"editor.renderWhitespace": "all",
+		"editor.insertSpaces": true
+	},
+	"[plaintext]": {
+		"editor.tabSize": 2,
+	},
+	"[jsonc]": {
+		//"editor.defaultFormatter": "HookyQR.beautify"
+	},
+	// "python.languageServer": "Pylance",
+	// "python.dataScience.sendSelectionToInteractiveWindow": false
+	//  "python.terminal.launchArgs": [
+	//  	"-m",
+	//  	"IPython",
+	//  	"--no-autoindent",
+	// ],
+	"[python]": {
+		"editor.renderWhitespace": "all",
+	},
+	"[build]": {
+		"editor.renderWhitespace": "all",
+		"editor.insertSpaces": true
+	},
+	"git.ignoreLegacyWarning": true,
+	"python.languageServer": "Pylance",
+	"jupyter.askForKernelRestart": false,
+	"python.pythonPath": "C:\\Python",
+	"tabnine.experimentalAutoImports": true,
+	"workbench.colorTheme": "Mariana Pro (Cool)",
+	"editor.columnSelection": true,
+	"[json]": {
+		"editor.defaultFormatter": "HookyQR.beautify"
+	},
+	"redhat.telemetry.enabled": false,
+	"[xml]": {
+		"editor.defaultFormatter": "DotJoshJohnson.xml"
+	},
+	"python.defaultInterpreterPath": "C:\\Python",
+	"python.linting.enabled": true,
+	"python.linting.pylintEnabled": true,
+	"python.linting.lintOnSave": true,
+	"window.zoomLevel": -1,
+	"workbench.iconTheme": "material-icon-theme"
+
+	// Give it a go to terminal profiles
+	// "terminal.integrated.profiles.windows": {
+	// 	// Add a PowerShell profile that doesn't run the profile
+	// 	"PowerShell (No Profile)": {
+	// 		// Some sources are available which auto detect complex cases
+	// 		"source": "PowerShell",
+	// 		"args": ["-NoProfile"],
+	// 		// Name the terminal "PowerShell (No Profile)" to differentiate it
+	// 		"overrideName": true
+	// 	},
+	// 	// Remove the builtin Git Bash profile
+	// 	"Git Bash": null,
+	// 	// Add a Cygwin profile
+	// 	"Cygwin": {
+	// 	  "path": "C:\\cygwin64\\bin\\bash.exe",
+	// 	  "args": ["--login"]
+	// 	}
+	//   }
+}

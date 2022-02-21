@@ -1,0 +1,246 @@
+// Place your key bindings in this file to override the defaults
+[
+    // SELECT PREVIOUS/NEXT WORD
+    {
+        "key": "ctrl+right",
+        "command": "cursorWordRight",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+shift+right",
+        "command": "cursorWordRightSelect",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "alt+shift+right",
+        "command": "cursorWordRightSelect",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+left",
+        "command": "cursorWordLeft",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+shift+left",
+        "command": "cursorWordLeftSelect",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "alt+shift+left",
+        "command": "cursorWordLeftSelect",
+        "when": "textInputFocus"
+    },
+    // JUMP TO NEXT/PREVIOUS BLACK LINE
+    {
+        "key": "ctrl+up",
+        "command": "block-travel.jumpUp",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+down",
+        "command": "block-travel.jumpDown",
+        "when": "editorTextFocus"
+    },
+    // HISTORY NAVIGATION
+    {
+        "key": "alt+left",
+        "command": "workbench.action.navigateBack"
+    },
+    {
+        "key": "alt+right",
+        "command": "workbench.action.navigateForward"
+    },
+    // INSERT NEW CURSORS ABOVE AND BELOW
+    //// First its time to unmap the options from shift
+    {
+        "key": "shift+up",
+        "command": "-cursorColumnSelectUp"
+    },
+    {
+        "key": "shift+down",
+        "command": "-cursorColumnSelectDown"
+    },
+    {
+        "key": "shift+left",
+        "command": "-cursorColumnSelectLeft"
+    },
+    {
+        "key": "shift+right",
+        "command": "-cursorColumnSelectRight"
+    },
+    // { "key": "shift+up", "command": "-list.expandSelectionUp", "when": "listFocus && listSupportsMultiselect && !inputFocus" },
+    // { "key": "shift+down", "command": "-list.expandSelectionUp", "when": "listFocus && listSupportsMultiselect && !inputFocus" },
+    //// Time to map them on alt+shift
+    {
+        "key": "shift+alt+up",
+        "command": "editor.action.insertCursorAbove",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+alt+up",
+        "command": "cursorColumnSelectUp",
+        "when": "editorColumnSelection && textInputFocus"
+    },
+    {
+        "key": "shift+alt+up",
+        "command": "list.expandSelectionUp",
+        "when": "listFocus && listSupportsMultiselect && !inputFocus"
+    },
+    {
+        "key": "shift+alt+down",
+        "command": "editor.action.insertCursorBelow",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+alt+down",
+        "command": "cursorColumnSelectDown",
+        "when": "editorColumnSelection && textInputFocus"
+    },
+    {
+        "key": "shift+alt+down",
+        "command": "list.expandSelectionDown",
+        "when": "listFocus && listSupportsMultiselect && !inputFocus"
+    },
+    // ACTIONS TO COPY LINES
+    {
+        "key": "ctrl+alt+down",
+        "command": "editor.action.copyLinesDownAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+alt+up",
+        "command": "editor.action.copyLinesUpAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    // FIND NEXT/PREVIOUS MATCHING ELEMENT
+    {
+        "key": "ctrl+shift+up",
+        "command": "editor.action.previousSelectionMatchFindAction",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+shift+down",
+        "command": "editor.action.nextSelectionMatchFindAction",
+        "when": "editorFocus"
+    },
+    // NEXT/PREVIOUS ERRORS
+    // ctrl+shift+m: Show errors
+    {
+        "key": "alt+up",
+        "command": "editor.action.marker.prevInFiles",
+        "when": "editorFocus && !editorReadonly"
+    },
+    {
+        "key": "alt+down",
+        "command": "editor.action.marker.nextInFiles",
+        "when": "editorFocus && !editorReadonly"
+    },
+    // EXPAND AND SHRINK SELECTION
+    {
+        "key": "ctrl+alt+right",
+        "command": "editor.action.smartSelect.expand",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+alt+left",
+        "command": "editor.action.smartSelect.shrink",
+        "when": "editorFocus"
+    },
+    // FOCUSING/MOVING PANES TO ANOTHER EDITOR
+    {
+        "key": "alt+shift+]",
+        "command": "workbench.action.moveEditorToNextGroup"
+    },
+    {
+        "key": "alt+shift+[",
+        "command": "workbench.action.moveEditorToPreviousGroup"
+    },
+    {
+        "key": "alt+]",
+        "command": "workbench.action.nextEditor"
+    },
+    {
+        "key": "alt+[",
+        "command": "workbench.action.previousEditor"
+    },
+    // 
+    //DOCUMENT FORMATING
+    {
+        "key": "ctrl+alt+enter",
+        "command": "editor.action.formatDocument",
+        "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
+    },
+    {
+        "key": "ctrl+shift+alt+b",
+        "command": "xmlTools.formatAsXml"
+    },
+    // { "key": "shift+alt+f",           "command": "editor.action.formatDocument.none",  "when": "editorTextFocus && !editorHasDocumentFormattingProvider && !editorReadonly" },
+    // { "key": "ctrl+k ctrl+f",         "command": "editor.action.formatSelection", "when": "editorHasDocumentSelectionFormattingProvider && editorTextFocus && !editorReadonly" },
+    // // Autofix
+    // //{ "key": "alt+enter",       "command": "editor.action.quickFix", "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly" },
+    // // Cycling tabs for autocompletion
+    // // { "key": "tab", "command": "selectNextQuickFix", "when": "editorFocus && quickFixWidgetVisible" },
+    // // { "key": "shift+tab", "command": "selectPrevQuickFix", "when": "editorFocus && quickFixWidgetVisible" },
+    // // { "key": "tab", "command": "selectNextSuggestion", "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible" },
+    // // { "key": "shift+tab", "command": "selectPrevSuggestion", "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"},
+    // // Find and replace stuff
+    // //  ctrl+f: Find in editor
+    // //  ctrl+h: Replace in editor
+    // //  ctrl+shift+f: Find in files
+    // //  ctrl+shift+h: Replace in files
+    // // Lines related to enter and backs 
+    // //  { "key": "ctrl+enter", "command": "editor.action.insertLineAfter", "when": "editorTextFocus && !editorReadonly" }, 
+    // //  { "key": "ctrl+shift+enter", "command": "editor.action.insertLineBefore", "when": "editorTextFocus && !editorReadonly" }, 
+    // //  { "key": "alt+enter",       "command": "problems.action.showQuickFixes", "when": "problemFocus" },
+    // // Show/hide panels, and change the layouts
+    // { "key": "ctrl+j",                "command": "workbench.action.togglePanel" },
+    // { "key": "ctrl+b",                "command": "workbench.action.toggleSidebarVisibility" },
+    // { "key": "f11",                   "command": "workbench.action.toggleFullScreen" },
+    // { "key": "ctrl+k z",              "command": "workbench.action.toggleZenMode" },
+    // // Select code to terminal commands (depend on the language)
+    // { "key": "ctrl+shift+enter", "command": "fsi.SendSelection", 
+    //     "when": "editorFocus && !findWidgetVisible && editorLangId == 'fsharp'" },
+    // // Python jupyter related shortcuts (moving shift + enter to ctrl + shift + enter)
+    // //  { "key": "shift+enter",           "command": "python.execSelectionInTerminal",
+    // //      "when": "editorTextFocus && !findInputFocussed && !jupyter.ownsSelection && !notebookEditorFocused && !replaceInputFocussed && editorLangId == 'python'" },
+    // //  { "key": "shift+enter",           "command": "jupyter.execSelectionInteractive",
+    // //      "when": "editorTextFocus && jupyter.ownsSelection && !findInputFocussed && !notebookEditorFocused && !replaceInputFocussed && editorLangId == 'python'" },
+    // //  { "key": "shift+enter",           "command": "jupyter.runcurrentcelladvance",
+    // //          "when": "editorTextFocus && jupyter.hascodecells && !editorHasSelection && !notebookEditorFocused" },
+    // //  { "key": "ctrl+enter",            "command": "jupyter.runcurrentcell",
+    // //          "when": "editorTextFocus && jupyter.hascodecells && !editorHasSelection && !jupyter.havenativecells && !notebookEditorFocused" },
+    // //  { "key": "alt+enter",             "command": "jupyter.runcurrentcellandaddbelow",
+    // //          "when": "editorTextFocus && jupyter.hascodecells && !editorHasSelection && !notebookEditorFocused" },
+    // //  { "key": "ctrl+enter",            "command": "notebook.cell.execute",
+    // //              "when": "config.jupyter.enableKeyboardShortcuts && editorTextFocus && inputFocus && notebookEditorFocused && notebookViewType == 'jupyter-notebook'" },
+    // // Debugger commands
+    {
+        "key": "alt+a",
+        "command": "editor.debug.action.selectionToWatch",
+        "when": "editorFocus"
+    },
+    {
+        "key": "f11",
+        "command": "workbench.action.debug.stepInto",
+        "when": "debugState != 'inactive'"
+    },
+    {
+        "key": "ctrl+enter",
+        "command": "-jupyter.runcurrentcell",
+        "when": "editorTextFocus && jupyter.hascodecells && !editorHasSelection && !jupyter.havenativecells && !notebookEditorFocused"
+    },
+    {
+        "key": "ctrl+enter",
+        "command": "-notebook.cell.execute",
+        "when": "config.jupyter.enableKeyboardShortcuts && editorTextFocus && inputFocus && notebookEditorFocused && notebookViewType == 'jupyter-notebook'"
+    },
+    {
+        "key": "ctrl+shift+n",
+        "command": "-workbench.action.newWindow"
+    },
+    {
+        "key": "ctrl+shift+n",
+        "command": "explorer.newFile"
+    },
+]
