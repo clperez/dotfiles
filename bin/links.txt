@@ -1,0 +1,4 @@
+C:\Windows\System32\cmd.exe /k ""C:\Users\carlos.alonso\bin\shell.bat" & start rider64.exe & exit /b 0"
+
+
+C:\Users\carlos.alonso\bin\wt.bat
