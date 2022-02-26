@@ -8,8 +8,8 @@ if ($host.Name -eq 'ConsoleHost') {
     Set-PSReadLineOption -HistorySearchCursorMovesToEnd
 
     # Menu autocompletion
-    Set-PSReadLineKeyHandler -Key Tab -Function Complete # Bash like mode
-    #Set-PSReadLineKeyHandler -Key Tab -Function MenuComplete # zsh mode
+    #Set-PSReadLineKeyHandler -Key Tab -Function Complete # Bash like mode
+    Set-PSReadLineKeyHandler -Key Tab -Function MenuComplete # zsh mode
 
     # Command prediction based on history
     Set-PSReadLineOption -PredictionSource History
