@@ -36,6 +36,11 @@ Import-Module z
 # function ls_alias { & 'C:\Program Files\Git\usr\bin\ls' --color=auto -hF $args }
 # Set-Alias -Name ls -Value ls_alias -Option Private
 
-function fn_config { &"C:\Program Files\Git\cmd\git.exe" --git-dir=$home\.cfg\ --work-tree=$home $args }
+function fn_config { &"$env:PROGRAMFILES\Git\cmd\git.exe" --git-dir=$home\.cfg\ --work-tree=$home $args }
 Set-Alias -Name config -Value fn_config -Option Private
 
+function fn_ryder { &"$env:LOCALAPPDATA\Local\JetBrains\Toolbox\apps\Rider\ch-0\213.6775.4\bin\rider64.exe" $args }
+Set-Alias -Name ryder -Value fn_ryder -Option Private
+
+function fn_nano { &"$env:PROGRAMFILES\Git\usr\bin\nano.exe" $args }
+Set-Alias -Name nano -Value fn_nano -Option Private
