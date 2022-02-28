@@ -39,7 +39,7 @@ Import-Module z
 function fn_config { &"$env:PROGRAMFILES\Git\cmd\git.exe" --git-dir=$home\.cfg\ --work-tree=$home $args }
 Set-Alias -Name config -Value fn_config -Option Private
 
-function fn_ryder { &"$env:LOCALAPPDATA\Local\JetBrains\Toolbox\apps\Rider\ch-0\213.6775.4\bin\rider64.exe" $args }
+function fn_ryder { &"$env:LOCALAPPDATA\JetBrains\Toolbox\apps\Rider\ch-0\213.6775.4\bin\rider64.exe" $args }
 Set-Alias -Name ryder -Value fn_ryder -Option Private
 
 function fn_nano { &"$env:PROGRAMFILES\Git\usr\bin\nano.exe" $args }
